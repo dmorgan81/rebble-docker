@@ -24,9 +24,12 @@ RUN cd /sdk && \
         pip install -r requirements.txt && \
         deactivate"
 
+ARG SDK_VERSION
+ENV SDK_VERSION ${SDK_VERSION:-4.3}
+
 RUN mkdir /sdk/.pebble-sdk && \
         touch /sdk/.pebble-sdk/NO_TRACKING && \
-        /bin/bash -c "yes | /sdk/bin/pebble sdk install https://github.com/Spitemare/pebble-sdks/raw/master/sdk-core-4.3.tar.bz2"
+        /bin/bash -c "yes | /sdk/bin/pebble sdk install https://github.com/aveao/PebbleArchive/raw/master/SDKCores/sdk-core-${SDK_VERSION}.tar.bz2"
 
 COPY rebble /sdk/bin/
 
