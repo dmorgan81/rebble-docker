@@ -1,0 +1,10 @@
+#!/bin/bash
+
+eval $(/usr/local/bin/fixuid -q)
+
+if [[ "$1" == "sdk" ]]; then
+    echo "We don't do that here."
+    exit 1
+fi
+
+/sdk/bin/pebble $@
