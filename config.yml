@@ -2,3 +2,5 @@ user: rebble
 group: rebble
 paths:
   - /work
+  - /sdk
+  
