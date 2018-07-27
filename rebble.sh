@@ -4,7 +4,7 @@ VERSION=latest
 
 while getopts ":v:" opt; do
   case ${opt} in
-    t )
+    v )
       VERSION=$OPTARG
       ;;
     : )
