@@ -21,11 +21,10 @@ The QEMU emulator works as well with a few limitations.
 1. You'll need to install with logs if you want the emulator to keep running, i.e. `rebble install --emulator basalt --logs`
 2. The other emulator commands don't quite work because you need an emulator running but multiple instances of the container can't talk to an emulator running in one.
 
-To workaround these limitations you can always change the image's entrypoint and work within the image as though you were working with just pebble-tool
+To workaround these limitations you can use the repl contained in the image.
 
-    docker run -it --rm \
-        --entrypoint /bin/bash \
-        -v $(pwd):/work \
-        -v /tmp/.X11-unix:/tmp/.X11-unix \
-        -e DISPLAY=$DISPLAY \
-        dmorgan81/rebble:latest
+### rebble shell
+
+The image contains a repl based on [shrepl](https://github.com/imomaliev/bash-repl/blob/master/bin/shrepl) and [rlwrap](https://github.com/hanslub42/rlwrap). The repl wraps the pebble-tool command. `rebble.sh shell` will run the shell. Ctrl-C will stop it and return to the host.
+
+The main advantage of rebble shell is that you can install to an emulator and then run other emulator commands. This also means the edit-build-install loop is possible using this image.
