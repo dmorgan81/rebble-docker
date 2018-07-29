@@ -2,9 +2,16 @@
 
 eval $(/usr/local/bin/fixuid -q)
 
+PATH=$HOME/bin:$PATH
+
 if [[ "$1" == "sdk" ]]; then
     echo "We don't do that here."
     exit 1
 fi
 
-/sdk/bin/pebble $@
+if [[ "$1" == "shell" ]]; then
+    sleep 0.1
+    REPL_PROMPT="[rebble]$" shrepl pebble
+else
+    pebble $@
+fi
