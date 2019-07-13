@@ -6,7 +6,7 @@ The image tag is the version of the SDK that is installed. dmorgan81/rebble:late
 
 ## Running
 
-rebble.sh should live somewhere in your PATH on your host machine. Now any pebble-tool command, other than SDK related commands, will be sent to the image and executed as though they were executed on the host machine. For example:
+[rebble.sh](rebble.sh) should live somewhere in your PATH on your host machine. Now any pebble-tool command, other than SDK related commands, will be sent to the image and executed as though they were executed on the host machine. For example:
 
     rebble.sh clean && rebble.sh build
 
