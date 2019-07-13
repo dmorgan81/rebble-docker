@@ -1,5 +1,9 @@
 This is a docker image based off of Ubuntu 18.04 that contains a working build environment for Pebble projects. A Pebble SDK is installed and configured. Host-guest file permissions are handled by [fixuid](https://github.com/boxboat/fixuid/).
 
+A prebuilt image can be obtained from https://hub.docker.com/r/dmorgan81/rebble/ via:
+
+    docker pull dmorgan81/rebble
+
 ## Tags
 
 The image tag is the version of the SDK that is installed. dmorgan81/rebble:latest will get you the 4.3 SDK since that was the last version of the SDK that was released.
