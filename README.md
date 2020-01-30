@@ -1,4 +1,4 @@
-This is a docker image based off of Ubuntu 18.04 that contains a working build environment for Pebble projects. A Pebble SDK is installed and configured. Host-guest file permissions are handled by [fixuid](https://github.com/boxboat/fixuid/).
+This is a docker image based off of Ubuntu 18.04 64-bit that contains a working build environment for Pebble projects. A Pebble SDK is installed and configured. Host-guest file permissions are handled by [fixuid](https://github.com/boxboat/fixuid/).
 
 ## Tags
 
